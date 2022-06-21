@@ -31,6 +31,7 @@ namespace SuperBASIC
 				lib.AddFunction(new Functions.Vec3(), 3, "VEC3_ADD");
 				lib.AddFunction(new Functions.SphereVol(), 1, "SPHERE_VOL");
 				lib.AddFunction(new Functions.OrthogonalBBox(), 3, "ORTHOGONAL_BBOX");
+				lib.AddFunction(new Functions.Partition(), 2, "PARTITION");
 				Runtime r = new Runtime(lib);
 				/*	Test.basic			
 				 				if (args.Length <= 1)
@@ -75,8 +76,11 @@ namespace SuperBASIC
 				r.OpenFile("C:\\Michel\\SuperBasic\\Test_SphereVol.txt");
 				r.Run();
 				*/
-				/* OrthogonalBBox */
+				/* OrthogonalBBox
 				r.OpenFile("C:\\Michel\\SuperBasic\\Test_OrthogonalBBox.txt");
+				r.Run(); */
+				/* Partition */
+				r.OpenFile("C:\\Michel\\SuperBasic\\Test_Partition.txt");
 				r.Run();
 			}
 			catch (Parser.ParseException e)
