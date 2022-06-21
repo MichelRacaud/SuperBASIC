@@ -23,8 +23,10 @@ namespace SuperBASIC
 				lib.AddFunction(new Functions.Pi(), 0, "PI");
 				lib.AddFunction(new Functions.Euler(), 0, "EULER");
 				lib.AddFunction(new Functions.ArcSin(), 1, "ARCSIN");
+				lib.AddFunction(new Functions.Sin(), 1, "SIN");
 				Runtime r = new Runtime(lib);
-				/*				if (args.Length <= 1)
+				/*	Test.basic			
+				 				if (args.Length <= 1)
 								{
 									r.OpenFile(Directory.GetCurrentDirectory() + "\\Test.basic");
 								} 
@@ -34,11 +36,17 @@ namespace SuperBASIC
 								}
 								r.Run();
 				*/
-
+				/* ArcSin
 				r.OpenFile("C:\\Michel\\SuperBasic\\Test_ArcSin.txt");
 				r.Run();
+				*/
+				/* Sin */
+				r.OpenFile("C:\\Michel\\SuperBasic\\Test_Sin.txt");
+				r.Run();
+				
 
-			} catch (Parser.ParseException e)
+			}
+			catch (Parser.ParseException e)
 			{
 				Console.WriteLine($"Parsing failed:\n{e}");
 			}
