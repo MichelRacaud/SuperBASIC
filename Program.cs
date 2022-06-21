@@ -25,6 +25,7 @@ namespace SuperBASIC
 				lib.AddFunction(new Functions.ArcSin(), 1, "ARCSIN");
 				lib.AddFunction(new Functions.Sin(), 1, "SIN");
 				lib.AddFunction(new Functions.SolveLinear(), 3, "SOLVE_LINEAR");
+				lib.AddFunction(new Functions.Rem(), 2, "REM");
 				Runtime r = new Runtime(lib);
 				/*	Test.basic			
 				 				if (args.Length <= 1)
@@ -45,8 +46,12 @@ namespace SuperBASIC
 				r.OpenFile("C:\\Michel\\SuperBasic\\Test_Sin.txt");
 				r.Run();
 				*/
-				/* SolveLinear */
+				/* SolveLinear
 				r.OpenFile("C:\\Michel\\SuperBasic\\Test_SolveLinear.txt");
+				r.Run();
+				*/
+				/* Rem */
+				r.OpenFile("C:\\Michel\\SuperBasic\\Test_Rem.txt");
 				r.Run();
 
 			}
