@@ -26,6 +26,7 @@ namespace SuperBASIC
 				lib.AddFunction(new Functions.Sin(), 1, "SIN");
 				lib.AddFunction(new Functions.SolveLinear(), 3, "SOLVE_LINEAR");
 				lib.AddFunction(new Functions.Rem(), 2, "REM");
+				lib.AddFunction(new Functions.Accumulate(), 2, "ACCUMULATE");
 				Runtime r = new Runtime(lib);
 				/*	Test.basic			
 				 				if (args.Length <= 1)
@@ -50,10 +51,13 @@ namespace SuperBASIC
 				r.OpenFile("C:\\Michel\\SuperBasic\\Test_SolveLinear.txt");
 				r.Run();
 				*/
-				/* Rem */
+				/* Rem
 				r.OpenFile("C:\\Michel\\SuperBasic\\Test_Rem.txt");
 				r.Run();
-
+				*/
+				/* Accumulate */
+				r.OpenFile("C:\\Michel\\SuperBasic\\Test_Accumulate.txt");
+				r.Run();
 			}
 			catch (Parser.ParseException e)
 			{
