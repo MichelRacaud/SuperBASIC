@@ -29,6 +29,7 @@ namespace SuperBASIC
 				lib.AddFunction(new Functions.Accumulate(), 2, "ACCUMULATE");
 				lib.AddFunction(new Functions.CylinderVol(), 2, "CYLINDER_VOL");
 				lib.AddFunction(new Functions.Vec3(), 3, "VEC3_ADD");
+				lib.AddFunction(new Functions.SphereVol(), 1, "SPHERE_VOL");
 				Runtime r = new Runtime(lib);
 				/*	Test.basic			
 				 				if (args.Length <= 1)
@@ -65,8 +66,12 @@ namespace SuperBASIC
 				r.OpenFile("C:\\Michel\\SuperBasic\\Test_CylinderVol.txt");
 				r.Run();
 				*/
-				/* Vec3 */
+				/* Vec3
 				r.OpenFile("C:\\Michel\\SuperBasic\\Test_Vec3.txt");
+				r.Run();
+				*/
+				/* SphereVol */
+				r.OpenFile("C:\\Michel\\SuperBasic\\Test_SphereVol.txt");
 				r.Run();
 			}
 			catch (Parser.ParseException e)
