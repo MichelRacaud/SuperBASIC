@@ -24,6 +24,7 @@ namespace SuperBASIC
 				lib.AddFunction(new Functions.Euler(), 0, "EULER");
 				lib.AddFunction(new Functions.ArcSin(), 1, "ARCSIN");
 				lib.AddFunction(new Functions.Sin(), 1, "SIN");
+				lib.AddFunction(new Functions.SolveLinear(), 3, "SOLVE_LINEAR");
 				Runtime r = new Runtime(lib);
 				/*	Test.basic			
 				 				if (args.Length <= 1)
@@ -40,10 +41,13 @@ namespace SuperBASIC
 				r.OpenFile("C:\\Michel\\SuperBasic\\Test_ArcSin.txt");
 				r.Run();
 				*/
-				/* Sin */
+				/* Sin
 				r.OpenFile("C:\\Michel\\SuperBasic\\Test_Sin.txt");
 				r.Run();
-				
+				*/
+				/* SolveLinear */
+				r.OpenFile("C:\\Michel\\SuperBasic\\Test_SolveLinear.txt");
+				r.Run();
 
 			}
 			catch (Parser.ParseException e)
