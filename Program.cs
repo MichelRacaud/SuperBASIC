@@ -27,6 +27,7 @@ namespace SuperBASIC
 				lib.AddFunction(new Functions.SolveLinear(), 3, "SOLVE_LINEAR");
 				lib.AddFunction(new Functions.Rem(), 2, "REM");
 				lib.AddFunction(new Functions.Accumulate(), 2, "ACCUMULATE");
+				lib.AddFunction(new Functions.CylinderVol(), 2, "CYLINDER_VOL");
 				Runtime r = new Runtime(lib);
 				/*	Test.basic			
 				 				if (args.Length <= 1)
@@ -55,8 +56,12 @@ namespace SuperBASIC
 				r.OpenFile("C:\\Michel\\SuperBasic\\Test_Rem.txt");
 				r.Run();
 				*/
-				/* Accumulate */
+				/* Accumulate
 				r.OpenFile("C:\\Michel\\SuperBasic\\Test_Accumulate.txt");
+				r.Run();
+				*/
+				/* CylinderVol */
+				r.OpenFile("C:\\Michel\\SuperBasic\\Test_CylinderVol.txt");
 				r.Run();
 			}
 			catch (Parser.ParseException e)
