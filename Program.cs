@@ -28,6 +28,7 @@ namespace SuperBASIC
 				lib.AddFunction(new Functions.Rem(), 2, "REM");
 				lib.AddFunction(new Functions.Accumulate(), 2, "ACCUMULATE");
 				lib.AddFunction(new Functions.CylinderVol(), 2, "CYLINDER_VOL");
+				lib.AddFunction(new Functions.Vec3(), 3, "VEC3_ADD");
 				Runtime r = new Runtime(lib);
 				/*	Test.basic			
 				 				if (args.Length <= 1)
@@ -60,8 +61,12 @@ namespace SuperBASIC
 				r.OpenFile("C:\\Michel\\SuperBasic\\Test_Accumulate.txt");
 				r.Run();
 				*/
-				/* CylinderVol */
+				/* CylinderVol
 				r.OpenFile("C:\\Michel\\SuperBasic\\Test_CylinderVol.txt");
+				r.Run();
+				*/
+				/* Vec3 */
+				r.OpenFile("C:\\Michel\\SuperBasic\\Test_Vec3.txt");
 				r.Run();
 			}
 			catch (Parser.ParseException e)
