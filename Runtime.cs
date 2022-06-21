@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SuperBASIC
 {
-	class Runtime
+	public class Runtime
 	{
 		public float register;
 		internal Library lib;

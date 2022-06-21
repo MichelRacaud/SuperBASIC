@@ -11,7 +11,7 @@ namespace SuperBASIC
 		Memory
 	};
 
-	struct BasicNumber
+	public struct BasicNumber
 	{
 		internal NumberType type;
 

@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace SuperBASIC
 {
-	class Parser
+	public class Parser
 	{
 
 		[Serializable]

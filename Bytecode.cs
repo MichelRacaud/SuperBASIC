@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SuperBASIC
 {
-	class Bytecode
+	public class Bytecode
 	{
 		internal List<BasicNumber> bytecode;
 

@@ -4,12 +4,11 @@ using System.Text;
 
 namespace SuperBASIC.Functions
 {
-	public class Print : IFunction
-	{
+    class ArcSin : IFunction
+    {
 		float IFunction.Apply(List<BasicNumber> arguments)
 		{
-			Console.WriteLine(arguments[0]);
-			return 0f;
+			return (float)Math.Asin(arguments[0]);
 		}
 	}
 }

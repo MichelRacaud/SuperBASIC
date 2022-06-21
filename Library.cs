@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SuperBASIC
 {
-	class Library
+	public class Library
 	{
 		internal List<IFunction> functions;
 		internal List<int> arities;
